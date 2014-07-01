@@ -15,7 +15,18 @@ First install the .aar to your local Maven repository:
 ./gradlew install
 ```
 
-Then in another Android project, you can add it to your dependencies:
+Then in another Android project, add the your local maven repository:
+
+```groovy
+allprojects {
+    repositories {
+        jcenter()
+        mavenLocal()
+    }
+}
+```
+
+Then you can add it to your dependencies:
 
 ```groovy
 dependencies {
